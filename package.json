@@ -4,23 +4,18 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "dev:frontend": "pnpm --filter src-frontend run dev",
+    "build:frontend": "pnpm --filter src-frontend run build",
+    "dev:server": "pnpm --filter src-server run dev",
+    "build:server": "pnpm --filter src-server run bundle",
+    "dev:all": "run-p dev:frontend dev:server",
+    "dev": "tauri dev -- -- --dev",
     "tauri": "tauri"
   },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-opener": "^2"
-  },
   "devDependencies": {
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "~5.6.2",
-    "vite": "^6.0.3",
-    "@tauri-apps/cli": "^2"
+    "@tauri-apps/cli": "^2",
+    "adm-zip": "^0.5.16",
+    "npm-run-all": "^4.1.5",
+    "tar": "^6.2.1"
   }
 }

@@ -4,21 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node esbuild.config.mjs && pkg bundle/server.bundle.js --config pkg.json -o ../src-tauri/bin/server-$(rustc -Vv | grep host | cut -f2 -d' ') -d"
+    "dev": "tsx watch src/index.ts --port 1450",
+    "bundle": "npx esbuild src/index.ts --bundle --platform=node --outfile=../src-tauri/bin/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "Apache-2.0",
   "packageManager": "pnpm@10.13.1",
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^24.9.1",
     "drizzle-kit": "^0.31.5",
-    "nexe": "5.0.0-beta.4",
     "tsx": "^4.20.6"
   },
   "dependencies": {
-    "@libsql/client": "^0.15.15",
     "ai": "^5.0.78",
+    "better-sqlite3": "^12.4.1",
     "drizzle-orm": "^0.44.7",
     "fastify": "^5.6.1"
   }
