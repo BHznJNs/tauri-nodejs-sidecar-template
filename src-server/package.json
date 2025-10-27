@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts --port 1450",
-    "bundle": "npx esbuild src/index.ts --bundle --platform=node --outfile=../src-tauri/bin/server.js"
+    "bundle": "esbuild src/index.ts --bundle --platform=node --outfile=../src-tauri/bin/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^24.9.1",
     "drizzle-kit": "^0.31.5",
+    "esbuild": "^0.25.11",
     "tsx": "^4.20.6"
   },
   "dependencies": {
