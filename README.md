@@ -1,7 +1,12 @@
-# Tauri + React + Typescript
+# Tauri + Nodejs Sidecar
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+This is a template project with a tech stack:
+- Tauri + React + TypeScript for the frontend
+- Nodejs Sidecar for the backend
 
-## Recommended IDE Setup
+## Getting Started
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+1. Use this repo
+2. `git clone <YourRepoURL>`
+3. `pnpm install`
+4. `pnpm run dev`
