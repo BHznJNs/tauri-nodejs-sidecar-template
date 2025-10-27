@@ -2,9 +2,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use clap::Parser;
-use daigent_lib::Args;
+use project_lib::Args;
 
 fn main() {
     let args = Args::parse();
-    daigent_lib::run(args);
+    project_lib::run(args);
 }
